@@ -1,0 +1,40 @@
+{
+    "name": "infoweb-internet-solutions/yii2-cms-pages",
+    "description": "Yii2 pages",
+    "keywords": ["yii2", "yii2-cms-pages", "infoweb"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/infoweb-internet-solutions/yii2-cms-pages/issues?state=open",
+        "source": "https://github.com/infoweb-internet-solutions/yii2-cms-pages"
+    },
+    "authors": [
+        {
+            "name": "Fabio Maggio",
+            "email": "fabio@infoweb.be",
+            "homepage": "https://github.com/fabiomaggio"
+        },
+        {
+            "name": "Ruben Heymans",
+            "email": "ruben@infoweb.be",
+            "homepage": "http://www.infoweb.be/"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "@stable",
+        "infoweb-internet-solutions/yii2-cms": "@stable",
+        "infoweb-internet-solutions/yii2-cms-sliders": "@stable",
+        "mihaildev/yii2-ckeditor": "@stable",
+        "kartik-v/yii2-widgets": "@stable",
+        "kartik-v/yii2-grid": "@stable",
+        "2amigos/yii2-translateable-behavior" : "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "infoweb\\pages\\": ""
+        }
+    },
+    "extra": {
+        "bootstrap": "infoweb\\pages\\Bootstrap"
+    }
+}

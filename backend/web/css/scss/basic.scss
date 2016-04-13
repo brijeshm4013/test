@@ -1,0 +1,41 @@
+/*basic css starts*/
+@import 'font';
+body,html{width:100%;padding:0;margin:0;font-family: 'montserrat-regular';color:#000;overflow-x:hidden;font-size:16px;background-color:#f9f9f9;}input,textarea{border:0;outline:0}iframe{border:0;margin:0;padding:0}input,select,textarea,ul{margin:0;padding:0; background-color: inherit;border: 0 none;box-shadow:none;}li,ol,ul{list-style:none}h1,h2,h3,h4,h5,h6{padding:0;margin:0;font-weight:400}p{line-height:20px;margin:0;padding:0}a{outline:0;-moz-outline:0}a:focus{outline:0;text-decoration:none}a:hover{text-decoration:none;cursor:pointer;color:inherit;}a,img{border:0;text-decoration:none}button{cursor:pointer}input:focus,select:focus,textarea:focus{outline:0}.nopad{padding:0 !important}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}table{border-collapse:collapse;border-spacing:0;margin:0}*,:after,:before{box-sizing:border-box}.clearfix{clear:both;}a{color: #0072dc;}
+section {
+    float: left;
+    width: 100%;
+}
+@media only screen and(min-width: 1366px)
+{
+.container{width:1200px;}
+}
+.mar-tp-10{margin-top:10px;}
+.mar-btm-10{margin-bottom:10px;}
+.mar-tp-20{margin-top:20px;}
+.mar-tp-35{margin-top: 35px;}
+.mar-tp-40{margin-top:40px;}
+.btn1color{background-color:#febd22;}
+.pad-tp-60{padding-top:60px;}
+.pad-tp-btm-20{padding-top:20px;padding-bottom:20px;}	
+.pad-tp-btm-60{padding-top:60px;padding-bottom:60px;}	
+.bg-grey{background:#f1f1f1;}
+.bg-white{background:#fff;}
+.link{ border:1px solid #a6a6a6;border-radius:4px;padding:10px 0; min-width:170px;color:#febd22; font-size:15px;display:inline-block;text-align:center;margin:0 10px;}
+.video-lnk i{ background: transparent url("../images/homepage-sprite.png") no-repeat scroll -96px -2px;
+    display: inline-block;
+    height: 23px;
+    margin-bottom: -7px;
+    margin-right: 5px;
+    width: 21px;}
+.read-more{color:#febd22; font-family: 'montserrat-light';font-size:15px;}
+.read-more:hover{text-decoration:underline;color:#febd22;}
+.v-center{display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-flex-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;justify-content: center; height:250px;}
+	
