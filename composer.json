@@ -31,9 +31,6 @@
         "johnitvn/yii2-ajaxcrud": "^2.1",
         "leandrogehlen/yii2-querybuilder": "*",
         "2amigos/yii2-gallery-widget": "~1.0",
-        "infoweb-internet-solutions/yii2-cms-pages": "*",
-        "infoweb-internet-solutions/yii2-cms-analytics": "*"
-
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
