@@ -15,7 +15,6 @@ use yii\widgets\ActiveForm;
 
     ]); ?>
 
-
     <div class="col-lg-12">
         <div class="col-md-12">
             <?php echo $form->errorSummary([$model],['class'=>'required has-error']); ?>
