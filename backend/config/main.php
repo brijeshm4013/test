@@ -48,8 +48,10 @@ return [
         'vendor-profile-management' => [
             'class' => 'common\modules\vendorProfileManagement\VendorProfileManagement',
         ],
-        'pages' => [
-            'class' => 'infoweb\pages\Module',
+
+        'site-page-management' => [
+            'class' => 'common\modules\sitePageManagement\SitePageManagement',
+            'defaultRoute' => 'site-page',
         ],
 
     ],

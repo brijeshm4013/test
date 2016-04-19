@@ -18,7 +18,7 @@ AppAsset::register($this);
     <!--/#header-->
     <?php echo $this->render("common/header.php"); ?>
     <!--/#header-->
-        <div id="page-wrapper">
+        <div id="page-wrapper" class="clearfix">
 
             <div class="col-lg-12">
                 <?php echo  Breadcrumbs::widget([

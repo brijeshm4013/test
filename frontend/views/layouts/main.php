@@ -60,8 +60,8 @@ use yii\widgets\Breadcrumbs;
 
 			<section class="post-content">
 				<?php
-				pr(Yii::$app->db);
-				//echo $content; ?>
+					echo $content;
+				?>
 			</section>
 			<footer>
 				<section id="social-share">
