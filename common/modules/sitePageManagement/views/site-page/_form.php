@@ -52,27 +52,20 @@ use yii\widgets\ActiveForm;
 
     <div class="col-lg-12">
         <div class="col-md-12">
-            <?= $form->field($model, 'meta_key_words')->widget(\dosamigos\ckeditor\CKEditor::className(), [
-                'options' => [
-                    'rows' => 3
-                ],
-                'clientOptions'=>[
-                    'height'=>'200px',
-                ]
-            ]) ?>
+            <?= $form->field($model, 'meta_key_words')->textarea() ?>
         </div>
     </div>
 
     <div class="col-lg-12">
         <div class="col-md-12">
-            <?= $form->field($model, 'meta_descriptions')->widget(\dosamigos\ckeditor\CKEditor::className(), [
-                'options' => [
-                    'rows' => 3,
-                ],
-                'clientOptions'=>[
-                    'height'=>'200px',
-                ]
-            ]) ?>
+            <?= $form->field($model, 'meta_key_phrase')->textarea() ?>
+        </div>
+    </div>
+
+
+    <div class="col-lg-12">
+        <div class="col-md-12">
+            <?= $form->field($model, 'meta_descriptions')->textarea() ?>
         </div>
     </div>
 
@@ -96,7 +89,10 @@ use yii\widgets\ActiveForm;
 
     function createSeoTitle(obj){
         var title = $(obj).val();
+        title=title.trim();
+        title=title.replace(/\W+/g, ' ')
         title=title.replace(/  +/g, ' ');
+        title=title.trim();
         $(obj).val(title);
         var titleArr=title.split(" ");
         var seoTitleArr=[];

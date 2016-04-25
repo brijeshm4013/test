@@ -21,8 +21,8 @@ class SitePage extends SitePageModel
     public function rules()
     {
         return [
-            [['page_type', 'title', 'seo_title', 'page_content', 'meta_key_words', 'meta_descriptions', 'is_active', 'create_at'], 'required', 'on'=>[self::SCENARIO_CREATE,self::SCENARIO_UPDATE]],
-            [['page_type', 'page_content', 'meta_key_words', 'meta_descriptions'], 'string'],
+            [['page_type', 'title', 'seo_title', 'page_content', 'meta_key_words','meta_key_phrase', 'meta_descriptions', 'is_active', 'create_at'], 'required', 'on'=>[self::SCENARIO_CREATE,self::SCENARIO_UPDATE]],
+            [['page_type', 'page_content', 'meta_key_words','meta_key_phrase', 'meta_descriptions'], 'string'],
             [['is_active'], 'integer'],
             [['title'],'unique','message'=>'Page with this title already exist'],
             [['create_at', 'update_at'], 'safe'],
@@ -74,6 +74,7 @@ class SitePage extends SitePageModel
             ->andFilterWhere(['like', 'seo_title', $this->seo_title])
             ->andFilterWhere(['like', 'page_content', $this->page_content])
             ->andFilterWhere(['like', 'meta_key_words', $this->meta_key_words])
+            ->andFilterWhere(['like', 'meta_key_phrase', $this->meta_key_phrase])
             ->andFilterWhere(['like', 'meta_descriptions', $this->meta_descriptions]);
 
         return $dataProvider;

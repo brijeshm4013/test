@@ -11,6 +11,12 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'defaultRoute' => 'booking/booking/index',
+    'modules'=>[
+        'booking' => [
+            'class' => 'frontend\modules\booking\Booking',
+        ],
+    ],
     'components' => [
         'user' => [
             'class' => 'backend\modules\userManagement\components\UserConfig',

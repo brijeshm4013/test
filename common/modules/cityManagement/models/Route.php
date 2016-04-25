@@ -112,4 +112,28 @@ class Route extends RouteModel
     public function getRouteName(){
         return $this->sourceCity->name.' To '.$this->destinationCity->name;
     }
+
+    public static function getRouteSourceCities(){
+        $routes=self::getRouteList();
+        $sourceCity=[];
+        foreach($routes as $route){
+            $sourceCity[$route->id]['id']=$route->sourceCity->id;
+            $sourceCity[$route->id]['name']=$route->sourceCity->name;
+        }
+        return $sourceCity;
+    }
+
+    public static function getRouteDestinationCitiesBySourceCity($source_city_id){
+        $routes=self::findAll(['is_active'=>1,'source_city_id'=>$source_city_id]);
+        $destination=[];
+        foreach($routes as $route){
+            $destination[]=[
+                'id'=>$route->destinationCity->id,
+                'text'=>$route->destinationCity->name
+            ];
+        }
+        return $destination;
+    }
+
+
 }

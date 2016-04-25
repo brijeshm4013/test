@@ -14,6 +14,7 @@ use Yii;
  * @property string $page_content
  * @property string $meta_key_words
  * @property string $meta_descriptions
+ * @property string $meta_key_phrase
  * @property integer $is_active
  * @property string $create_at
  * @property string $update_at
@@ -34,8 +35,8 @@ class SitePage extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['page_type', 'title', 'seo_title', 'page_content', 'meta_key_words', 'meta_descriptions', 'is_active', 'create_at'], 'required'],
-            [['page_type', 'page_content', 'meta_key_words', 'meta_descriptions'], 'string'],
+            [['page_type', 'title', 'seo_title', 'page_content', 'meta_key_words', 'meta_descriptions', 'meta_key_phrase', 'is_active', 'create_at'], 'required'],
+            [['page_type', 'page_content', 'meta_key_words', 'meta_descriptions', 'meta_key_phrase'], 'string'],
             [['is_active'], 'integer'],
             [['create_at', 'update_at'], 'safe'],
             [['title', 'seo_title'], 'string', 'max' => 45]
@@ -55,6 +56,7 @@ class SitePage extends \yii\db\ActiveRecord
             'page_content' => 'Page Content',
             'meta_key_words' => 'Meta Key Words',
             'meta_descriptions' => 'Meta Descriptions',
+            'meta_key_phrase' => 'Meta Key Phrase',
             'is_active' => 'Is Active',
             'create_at' => 'Create At',
             'update_at' => 'Update At',

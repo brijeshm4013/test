@@ -27,9 +27,23 @@ class GhostMenu extends \webvimark\modules\UserManagement\components\GhostMenu
             [
                 'url'=>'#',
                 'submenuTemplate'=> "\n<ul class='nav nav-second-level'>\n{items}\n</ul>\n",
+                'label' => '<i class="fa fa-sitemap fa-fw"></i> Booking Management<span class="fa arrow"></span>',
+                'items'=>self::bookingManagementMenuItems(),
+            ],
+            [
+                'url'=>'#',
+                'submenuTemplate'=> "\n<ul class='nav nav-second-level'>\n{items}\n</ul>\n",
                 'label' => '<i class="fa fa-sitemap fa-fw"></i> User Management<span class="fa arrow"></span>',
                 'items'=>self::userManagementMenuItems(),
             ],
+
+            [
+                'url'=>'#',
+                'submenuTemplate'=> "\n<ul class='nav nav-second-level'>\n{items}\n</ul>\n",
+                'label' => '<i class="fa fa-sitemap fa-fw"></i> Site Page Management<span class="fa arrow"></span>',
+                'items'=>self::sitePageManagementMenuItems(),
+            ],
+
             [
                 'url'=>'#',
                 'submenuTemplate'=> "\n<ul class='nav nav-second-level'>\n{items}\n</ul>\n",
@@ -55,12 +69,7 @@ class GhostMenu extends \webvimark\modules\UserManagement\components\GhostMenu
                 'label' => '<i class="fa fa-sitemap fa-fw"></i> Document Management<span class="fa arrow"></span>',
                 'items'=>self::documentManagementMenuItems(),
             ],
-            [
-                'url'=>'#',
-                'submenuTemplate'=> "\n<ul class='nav nav-second-level'>\n{items}\n</ul>\n",
-                'label' => '<i class="fa fa-sitemap fa-fw"></i> Booking Management<span class="fa arrow"></span>',
-                'items'=>self::bookingManagementMenuItems(),
-            ],
+
             [
                 'url'=>'#',
                 'submenuTemplate'=> "\n<ul class='nav nav-second-level'>\n{items}\n</ul>\n",
@@ -211,6 +220,19 @@ class GhostMenu extends \webvimark\modules\UserManagement\components\GhostMenu
 
             ['label' => '<i class="fa  fa-fw"></i> ' . UserManagementModule::t('back', 'Change Password'), 'url' => ['/user-management/auth/change-own-password']],
 
+        ];
+        return $menu;
+    }
+
+    /**
+     * For Site Page Management Menu Items
+     *
+     * @return array
+     */
+    public static function sitePageManagementMenuItems()
+    {
+        $menu=[
+            ['label' => '<i class="fa  fa-fw"></i> ' . UserManagementModule::t('back', 'Site Pages'), 'url' => ['/site-page-management/site-page']],
         ];
         return $menu;
     }

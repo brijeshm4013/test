@@ -17,13 +17,21 @@ class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
+    public $sourcePath = '@bower/bootstrap/dist';
+
     public $css = [
+        'font/font-awesome/css/font-awesome.min.css',
+        'css/materialize.css',
+        'css/prism.css',
         'css/site.css',
     ];
     public $js = [
+
     ];
+
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        'frontend\assets\BootstrapPluginAsset',
     ];
+
 }
